@@ -8,12 +8,11 @@ import { ServersService } from '../servers.service';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent implements OnInit {
-  server: {id: number, name: string, status: string};
+  server: { id: number, name: string, status: string };
 
   constructor(private serversService: ServersService) { }
 
   ngOnInit() {
     this.server = this.serversService.getServer(1);
   }
-
 }
